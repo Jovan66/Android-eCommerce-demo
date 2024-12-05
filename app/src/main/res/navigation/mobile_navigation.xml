@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.j_and_a.demo_catalogo_eccomerce.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/fromHomepageToItemPage"
+            app:destination="@id/itemPageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_shop"
+        android:name="com.j_and_a.demo_catalogo_eccomerce.ui.shop_category.ShopCategoryFragment"
+        android:label="@string/title_shop"
+        tools:layout="@layout/fragment_shop_categories" >
+        <action
+            android:id="@+id/fromShopCategoriesToShopItems"
+            app:destination="@id/shopItemsFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_like"
+        android:name="com.j_and_a.demo_catalogo_eccomerce.ui.liked_items.LikedFragment"
+        android:label="@string/title_like"
+        tools:layout="@layout/fragment_liked" >
+        <action
+            android:id="@+id/fromLikesToItemPage"
+            app:destination="@id/itemPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopItemsFragment"
+        android:name="com.j_and_a.demo_catalogo_eccomerce.ui.shop_items.ShopItemsFragment"
+        android:label="fragment_shop_items"
+        tools:layout="@layout/fragment_shop_items" >
+        <action
+            android:id="@+id/fromShopItemsToItemPage"
+            app:destination="@id/itemPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.j_and_a.demo_catalogo_eccomerce.ui.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/fromCartToItemPage"
+            app:destination="@id/itemPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemPageFragment"
+        android:name="com.j_and_a.demo_catalogo_eccomerce.ui.item_page.ItemPageFragment"
+        android:label="fragment_item_page"
+        tools:layout="@layout/fragment_item_page" />
+</navigation>

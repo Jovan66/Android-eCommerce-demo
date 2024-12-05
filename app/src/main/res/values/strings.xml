@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">demo_catalogo_eccomerce</string>
+    <string name="title_home">Home</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_like">Like</string>
+    <string name="title_cart">Cart</string>
+</resources>

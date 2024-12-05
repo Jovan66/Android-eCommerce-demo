@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="370dp">
+
+    <!-- android:clipToOutline="true" -->
+
+    <ImageView
+        android:id="@+id/recycler_imageview_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/rounded_corners_10dp_rectangole"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_space_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_layout_imageview_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/recycler_space_divider"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/recycler_layout_imageview_image"
+        android:layout_width="220dp"
+        android:layout_height="250dp"
+        android:background="@drawable/rounded_corners_10dp_rectangole_clear"
+        android:scaleType="centerCrop"
+        android:src="@drawable/home_back_color_0"
+        app:layout_constraintEnd_toStartOf="@+id/recycler_space_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/recycler_layout_imageview_likes"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="-20dp"
+        android:background="@drawable/circle_white_background"
+        android:padding="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/like"
+        android:tintMode="src_in"
+        android:translationZ="2dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_layout_imageview_image"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_layout_imageview_image" />
+
+    <TextView
+        android:id="@+id/recycler_layout_textview_corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_corners_background"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="3dp"
+        android:text="Corner Text"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/recycler_layout_linearlayout_stars"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_layout_imageview_image">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/star_full_color" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/star_full_color" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/star_full_color" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/star_full_color" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/star_full_color" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/recycler_layout_textview_itemname"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:text="Cocktail Name"
+        android:textColor="@color/subtitle_text_gray"
+        app:layout_constraintEnd_toStartOf="@+id/recycler_layout_imageview_likes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_layout_linearlayout_stars" />
+
+    <TextView
+        android:id="@+id/recycler_layout_textview_category"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"
+        android:text="Category"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_layout_textview_itemname" />
+
+    <TextView
+        android:id="@+id/recycler_layout_textview_price"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"
+        android:text="Price"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_layout_textview_category" />
+
+    <TextView
+        android:id="@+id/recycler_layout_textview_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:text="Discounted Price"
+        android:textColor="@color/main_red"
+        app:layout_constraintStart_toEndOf="@+id/recycler_layout_textview_price"
+        app:layout_constraintTop_toTopOf="@+id/recycler_layout_textview_price" />
+
+    <Space
+        android:id="@+id/recycler_space_bottom"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
